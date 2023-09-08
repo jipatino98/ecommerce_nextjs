@@ -8,6 +8,7 @@ const prisma = new PrismaClient();
 
 export const authOptions = {
   adapter: PrismaAdapter(prisma),
+  secret: process.env.NEXTAUTH_SECRET,
   //Here we can add any provider we want
   providers: [
     GoogleProvider({
